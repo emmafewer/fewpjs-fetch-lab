@@ -1,6 +1,11 @@
+// to play around with json data
+// let bookArray;
+
 function fetchBooks() {
   return fetch('https://anapioficeandfire.com/api/books')
   .then(resp => resp.json())
+  // to play around with json data
+  // .then(json => bookArray = json)
   .then(json => renderBooks(json)); 
 }
 
@@ -14,5 +19,5 @@ function renderBooks(books) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  fetchBooks()
+  let x = fetchBooks()
 })
